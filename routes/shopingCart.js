@@ -51,5 +51,14 @@ router.get('/api/list',function(req,res,next){
     res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data);
 })
+//删除购物车商品
+router.post('/api/delete/list/item',function(req,res,next){
+   console.log(req)
+})
+
+//加入购物车
+router.post('/api/add/list/item',function(req,res,next){
+    console.log(req)
+ })
 
 module.exports = router
