@@ -204,7 +204,7 @@ router.get('/api/goods/list', function (req, res, next) {
     res.send(res_data);
 })
 
-//获取分类列表
+//获取分类列表 .
 router.get('/api/classify/list', function (req, res, next) {
     const res_data = {
         status: 200,
