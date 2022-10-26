@@ -31,6 +31,8 @@ router.post('/api/login', function (req, res, next) {
          token:nanoid(32),
          userName:'syh',
          gender:'男',
+         autograph:'',
+         introduce:'',
          vipLevel:0,//会员级别
          avatar:'https://img2.baidu.com/it/u=1336340007,2015118511&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
          moneyBag:{
