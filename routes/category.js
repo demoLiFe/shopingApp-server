@@ -125,7 +125,7 @@ router.get('/api/navGoods/list', function (req, res, next) {
             }
         ]
     };
-    if (!!req.query) {
+    if (Object.keys(req.query).length > 0) {
         res_data.data = res_data.data.filter(v => {
             return v.pid === Number(req.query.id)
         });
