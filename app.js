@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var expressWs = require('express-ws');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -9,9 +10,12 @@ var usersRouter = require('./routes/users');
 var shopingCartRouter = require('./routes/shopingCart');
 var category = require('./routes/category');
 var order = require('./routes/order')
+var socktRouter = require('./routes/sockt');
 
 
 var app = express();
+expressWs(app)
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,7 +31,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/shopingCart',shopingCartRouter);
 app.use('/category',category);
-app.use('/order',order)
+app.use('/order',order);
+app.use('/sockt',socktRouter);
+app.listen(8090);
 
 
 // catch 404 and forward to error handler
