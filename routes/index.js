@@ -178,7 +178,7 @@ router.get('/api/cate/goods/list',function(req,res,next){
       }
      ]
    };
-   res.header('Access-Control-Allow-Oringin','*')
+   res.header("Access-Control-Allow-Origin", "*");//设置跨域
    res.send(res_data);
 })
 

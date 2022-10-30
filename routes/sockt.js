@@ -40,7 +40,7 @@ router.ws('/api/message/list', function (ws, req) {
             dateTime: '2022-10-15 22:00',
             list: [
                 {
-                    uid: '888888',
+                    uid: 'syh-123456',
                     avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
                     nickName: '',
                     msg: '今天天气真好',
@@ -48,7 +48,7 @@ router.ws('/api/message/list', function (ws, req) {
                     voice: ''
                 },
                 {
-                    uid: '000000',
+                    uid: 'syh-888888',
                     avatar: 'https://img0.baidu.com/it/u=3375911127,635571288&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1665939600&t=7029e8b7be0870a89869b76310752358',
                     nickName: '',
                     msg: '是啊 真不错',
@@ -56,7 +56,7 @@ router.ws('/api/message/list', function (ws, req) {
                     voice: ''
                 },
                 {
-                    uid: '000000',
+                    uid: 'syh-888888',
                     avatar: 'https://img0.baidu.com/it/u=3375911127,635571288&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1665939600&t=7029e8b7be0870a89869b76310752358',
                     nickName: '',
                     msg: '帅哥在干嘛呢',
@@ -64,7 +64,7 @@ router.ws('/api/message/list', function (ws, req) {
                     voice: ''
                 },
                 {
-                    uid: '888888',
+                    uid: 'syh-123456',
                     avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
                     nickName: '',
                     msg: '你猜啊',
@@ -72,7 +72,7 @@ router.ws('/api/message/list', function (ws, req) {
                     voice: ''
                 },
                 {
-                    uid: '000000',
+                    uid: 'syh-888888',
                     avatar: 'https://img0.baidu.com/it/u=3375911127,635571288&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1665939600&t=7029e8b7be0870a89869b76310752358',
                     nickName: '',
                     msg: '直男 喝岩浆去吧 抽鞭炮 抽鞭炮 抽鞭炮 抽鞭炮',
@@ -80,7 +80,7 @@ router.ws('/api/message/list', function (ws, req) {
                     voice: ''
                 },
                 {
-                    uid: '888888',
+                    uid: 'syh-123456',
                     avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
                     nickName: '',
                     msg: '我抽你大爷 你个二怂',
@@ -88,7 +88,7 @@ router.ws('/api/message/list', function (ws, req) {
                     voice: ''
                 },
                 {
-                    uid: '000000',
+                    uid: 'syh-888888',
                     avatar: 'https://img0.baidu.com/it/u=3375911127,635571288&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1665939600&t=7029e8b7be0870a89869b76310752358',
                     nickName: '',
                     msg: '拉黑 再见 狗东西！',
@@ -96,7 +96,7 @@ router.ws('/api/message/list', function (ws, req) {
                     voice: ''
                 },
                 {
-                    uid: '888888',
+                    uid: 'syh-123456',
                     avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
                     nickName: '',
                     msg: '滚蛋',
@@ -104,7 +104,7 @@ router.ws('/api/message/list', function (ws, req) {
                     voice: ''
                 },
                 {
-                    uid: '888888',
+                    uid: 'syh-123456',
                     avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
                     nickName: '',
                     msg: '什么玩意儿 我是你鸡哥',
@@ -116,18 +116,21 @@ router.ws('/api/message/list', function (ws, req) {
     ]
 
     ws.send(JSON.stringify(data));
-    ws.on('message', function (msg) {
-        console.log(msg)
-        data[0].list.push(
-            {
-                uid: '888888',
-                avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
-                nickName: '',
-                msg: msg,
-                pic: '',
-                voice: ''
-            }
-        )
+    ws.on('message', function (msg_data) {
+        console.log(msg_data)
+        if(!!msg_data){
+            data[0].list.push(
+                {
+                    uid: JSON.parse(msg_data).user,
+                    avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
+                    nickName: '',
+                    msg: JSON.parse(msg_data).msg,
+                    pic: '',
+                    voice: ''
+                }
+            ) 
+        }
+       
         ws.send(JSON.stringify(data));
         // ws.send('2222',msg)  
     })

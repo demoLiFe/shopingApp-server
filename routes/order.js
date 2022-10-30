@@ -64,7 +64,7 @@ router.get('/api/list',function(req,res,next){
             });    
         };
     }; 
-    res.header('Access-Control-Origin','*')
+    res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data)
 })
 
@@ -73,7 +73,7 @@ router.post('/api/cancel/list',function(req,res,next){
     const res_data = {
         status:''
     };
-    res.header('Access-Control-Origin','*')//设置跨域
+    res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send() 
 })
 module.exports = router

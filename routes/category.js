@@ -20,7 +20,7 @@ router.get('/api/nav/list', function (req, res, next) {
             },
         ]
     }
-    res.header('Access-Control-Origin', '*')//设置跨域
+    res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data)
 });
 
@@ -130,7 +130,7 @@ router.get('/api/navGoods/list', function (req, res, next) {
             return v.pid === Number(req.query.id)
         });
     };
-    res.header('Access-Control-Origin', '*');
+    res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data);
 })
 
@@ -200,7 +200,7 @@ router.get('/api/goods/list', function (req, res, next) {
             });   
         };
     };
-    res.header('Access-Control-Origin', '*');//设置跨域
+    res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data);
 })
 
@@ -223,7 +223,7 @@ router.get('/api/classify/list', function (req, res, next) {
             },
         ]
     };
-    res.header('Access-Control-Origin', '*');
+    res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data);
 })
 

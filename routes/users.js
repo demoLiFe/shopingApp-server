@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 //内置账号 后期从数据库获取
-const Account = 'syh-123456';
-const Password = 'pwd12345678';
+const Account =  ['syh-123456','syh-888888']; 
+const Password = [ 'pwd12345678'];
 
 //随机生成nanoid
 const nanoid = (size = 21)=>{
@@ -24,12 +24,12 @@ router.post('/api/login', function (req, res, next) {
   if (!!req) {
     const { account, password } = req.body
     const res_data = {};
-    if (account === Account && password === Password) {
+    if ( Account.includes(account)  &&  Password.includes(password)) {
       res_data['status'] = 200;
       res_data['msg'] = '登陆成功';
       res_data['data'] = {
          token:nanoid(32),
-         userName:'syh',
+         userName:account,
          gender:'男',
          autograph:'',
          introduce:'',
@@ -46,7 +46,7 @@ router.post('/api/login', function (req, res, next) {
       res_data['status'] = 500;
       res_data['msg'] = '账号或密码错误,请重新输入';
     };
-    res.header('Access-Control-Origin', '*')//设置跨域
+    res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data);
   };
 });
@@ -59,7 +59,7 @@ router.post('/api/logout',function(req,res,next){
         }
      };
     
-    res.header('Access-Control-Origin','*')//设置跨域
+     res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data)
 })
 
