@@ -5,6 +5,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var bodyParser = require('body-parser');
+ 
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var shopingCartRouter = require('./routes/shopingCart');
@@ -16,6 +20,16 @@ var socktRouter = require('./routes/sockt');
 var app = express();
 expressWs(app)
 
+
+//post请求不能直接获取参数
+app.use(bodyParser.json({ limit: '1mb'}))//body-parser 解析json格式数据
+app.use(bodyParser.urlencoded({ extended: true}))
+ 
+app.all('*',function(req,res,next){
+  res.header('Access-Control-Allow-Origin', '*');//的允许所有域名的端口请求（跨域解决）
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

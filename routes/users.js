@@ -19,6 +19,7 @@ const nanoid = (size = 21)=>{
 };
 
 
+
 /* 登陆 */
 router.post('/api/login', function (req, res, next) {
   if (!!req) {
@@ -46,7 +47,6 @@ router.post('/api/login', function (req, res, next) {
       res_data['status'] = 500;
       res_data['msg'] = '账号或密码错误,请重新输入';
     };
-    res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data);
   };
 });
@@ -58,8 +58,6 @@ router.post('/api/logout',function(req,res,next){
           msg:'操作成功'
         }
      };
-    
-     res.header("Access-Control-Allow-Origin", "*");//设置跨域
     res.send(res_data)
 })
 
