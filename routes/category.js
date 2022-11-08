@@ -34,32 +34,32 @@ router.get('/api/navGoods/list', function (req, res, next) {
                 pid: 1,
                 list: [
                     {
-                        name: '全面屏手机',
-                        picture: '/static/temp/cate2.jpg'
+                        name: '商务',
+                        picture: 'https://img10.360buyimg.com/n3/jfs/t1/105276/22/32553/2278/630dfe44Eee19cc5a/203a059a52c3ca9b.jpg'
                     },
                     {
-                        name: '游戏手机',
-                        picture: '/static/temp/cate3.jpg'
+                        name: '持久续航',
+                        picture: 'https://img11.360buyimg.com/n3/jfs/t1/186154/14/27683/2735/630dfe35E90242ef4/ef78945f173c8a78.jpg'
                     },
                     {
-                        name: '老人机',
-                        picture: '/static/temp/cate1.jpg'
+                        name: '高性能',
+                        picture: 'https://img12.360buyimg.com/n3/jfs/t1/25208/11/19392/3180/630dfe3bE0a99c4d8/6dce772424c51183.jpg'
                     },
                     {
-                        name: '拍照手机',
-                        picture: '/static/temp/cate4.jpg'
+                        name: '折叠屏',
+                        picture: 'https://img13.360buyimg.com/n3/jfs/t1/16125/25/17913/3206/630dfe2bE4d102be7/9ccd06a63964ee4b.jpg'
                     },
                     {
-                        name: '女性手机',
-                        picture: '/static/temp/cate5.jpg'
+                        name: '拍照',
+                        picture: 'https://img12.360buyimg.com/n3/jfs/t1/52524/35/22190/2739/630dfe47E80350c28/cef0216d333faa6b.jpg'
                     },
                     {
-                        name: '合约机',
-                        picture: '/static/temp/cate1.jpg'
+                        name: '电竞',
+                        picture: 'https://img13.360buyimg.com/n3/jfs/t1/188643/40/28724/3322/630e0618Ed5f02bc9/88c4380bdfd6e5a6.jpg'
                     },
                     {
-                        name: '选好卡',
-                        picture: '/static/temp/cate4.jpg'
+                        name: '高性价比',
+                        picture: 'https://img10.360buyimg.com/n3/jfs/t1/121048/11/29427/3052/630e060dE34dfd936/c2974cd108366bfd.jpg'
                     },
                 ]
             },
@@ -68,28 +68,28 @@ router.get('/api/navGoods/list', function (req, res, next) {
                 pid: 2,
                 list: [
                     {
-                        name: '公益摆件',
-                        picture: '/static/temp/cate7.jpg'
-                    },
-                    {
-                        name: '创意礼品',
-                        picture: '/static/temp/cate8.jpg'
-                    },
-                    {
-                        name: '鲜花',
-                        picture: '/static/temp/cate9.jpg'
+                        name: '鲜花礼盒',
+                        picture: 'https://img10.360buyimg.com/n3/jfs/t1/204186/25/18236/17291/61b31773E03c4be39/4051db85140fcc57.jpg'
                     },
                     {
                         name: '每周一花',
-                        picture: '/static/temp/cate10.jpg'
+                        picture: 'https://img12.360buyimg.com/n3/jfs/t1/173980/10/22509/14809/61b3177cE003b1075/b23789dcca785bcf.jpg'
                     },
                     {
-                        name: '卡通花束',
-                        picture: '/static/temp/cate11.jpg'
+                        name: '玫瑰',
+                        picture: 'https://img13.360buyimg.com/n3/jfs/t1/214779/30/7295/15657/61b31776E3efdb6ca/8450eefcbac586b2.jpg'
                     },
                     {
-                        name: '永生花',
-                        picture: '/static/temp/cate12.jpg'
+                        name: '生日礼物',
+                        picture: 'https://img14.360buyimg.com/n3/jfs/t1/7234/33/19139/9495/6316bfacEa3f0054e/1811aa3e764577f2.jpg'
+                    },
+                    {
+                        name: '表白礼物',
+                        picture: 'https:////img13.360buyimg.com/n3/jfs/t1/161428/27/30437/4649/6316bfbaE11c2ff60/745ba502c77d07c5.jpg'
+                    },
+                    {
+                        name: '鲜花花束',
+                        picture: 'https://img10.360buyimg.com/n3/jfs/t1/211042/21/12135/16667/61b31770Eb623ecb8/ecfcd5a1b829dc71.jpg'
                     },
                 ]
             },
@@ -99,27 +99,27 @@ router.get('/api/navGoods/list', function (req, res, next) {
                 list: [
                     {
                         name: '男士T恤',
-                        picture: '/static/temp/cate13.jpg'
+                        picture: 'https://img10.360buyimg.com/n3/jfs/t1/26185/1/19113/3603/62f4cd66Ea6686c72/d65a587828eedc5e.jpg'
                     },
                     {
-                        name: '男士外套',
-                        picture: '/static/temp/cate14.jpg'
+                        name: '男士衬衫',
+                        picture: 'https://img11.360buyimg.com/n3/jfs/t1/222807/24/19289/1709/62f4cd6fEe8ab7403/6f03472bd43d862a.jpg'
                     },
                     {
-                        name: '裙装',
-                        picture: '/static/temp/cate15.jpg'
+                        name: '卫衣',
+                        picture: 'https://img13.360buyimg.com/n3/jfs/t1/70/39/18479/3578/62f4cd97E28014b8c/3ca0022086ba3866.jpg'
                     },
                     {
-                        name: 'T恤',
-                        picture: '/static/temp/cate16.jpg'
+                        name: '棒球服',
+                        picture: 'https://img12.360buyimg.com/n3/jfs/t1/169802/40/29156/4095/62f4cde7Ec6f09148/de4b7e2213e434ac.jpg'
                     },
                     {
-                        name: '上装',
-                        picture: '/static/temp/cate15.jpg'
+                        name: '裙子',
+                        picture: 'https://img11.360buyimg.com/n2/s370x370_jfs/t1/190224/32/28513/222736/633be9a4E09e12f17/3649f567521d4039.jpg!q70.jpg.webp'
                     },
                     {
-                        name: '下装',
-                        picture: '/static/temp/cate16.jpg'
+                        name: '女士卫衣',
+                        picture: 'https://img12.360buyimg.com/n2/s370x370_jfs/t1/199049/9/20032/221009/61b5c978E921e0881/189c5a1ccd318869.jpg!q70.jpg.webp'
                     },
                 ]
             }

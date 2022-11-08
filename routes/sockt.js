@@ -54,7 +54,7 @@ const msgData = [
             {
                 id:nanoid(32),
                 uid: 'syh-123456',
-                avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
+                avatar: 'https://img2.baidu.com/it/u=1336340007,2015118511&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
                 nickName: '',
                 msg: '今天天气真好',
                 pic: '',
@@ -85,7 +85,7 @@ router.ws('/api/message/list', function (ws, req) {
                 {
                     id:nanoid(32),
                     uid: JSON.parse(msg_data).user,
-                    avatar: 'https://img1.baidu.com/it/u=3353873514,1997887075&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
+                    avatar: JSON.parse(msg_data).avatar,
                     nickName: '',
                     msg: JSON.parse(msg_data).msg,
                     pic: '',

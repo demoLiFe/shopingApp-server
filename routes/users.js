@@ -35,7 +35,7 @@ router.post('/api/login', function (req, res, next) {
          autograph:'',
          introduce:'',
          vipLevel:0,//会员级别
-         avatar:'https://img2.baidu.com/it/u=1336340007,2015118511&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+         avatar: account === 'syh-123456' ? 'https://img2.baidu.com/it/u=1336340007,2015118511&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500' : 'https://img0.baidu.com/it/u=3375911127,635571288&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1665939600&t=7029e8b7be0870a89869b76310752358',
          moneyBag:{
            money:888,
            coupon:10,
