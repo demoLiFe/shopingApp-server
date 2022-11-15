@@ -20,7 +20,7 @@ router.get('/api/banner/list', function (req, res, next) {
         background: "#E66CA7",
       },
       {
-        src: "https://m15.360buyimg.com/mobilecms/jfs/t1/71335/33/20634/82165/62cf4752E0dfde956/471dab3897de0c41.jpg!cr_1125x449_0_166!q70.jpg",
+        src: "https://m15.360buyimg.com/mobilecms/jfs/t1/116247/25/30191/132721/636cb593E06cc5c89/32ae281333fa9fa8.jpg!cr_1125x449_0_166!q70.jpg",
         background: "#835DFE",
       },
       {
