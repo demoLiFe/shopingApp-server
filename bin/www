@@ -6,11 +6,21 @@
 
 var app = require('../app');
 var debug = require('debug')('admin:server');
-var http = require('http');
+// var http = require('http');
+var fs = require('fs');
+var path = require('path');
+var https = require('https');
 
 /**
  * Get port from environment and store in Express.
  */
+
+//配置SSL证书
+const options = {
+  pfx: fs.readFileSync(path.join(__dirname,'public','www.****.***.pfx')),
+  passphrase: '***********'
+}
+
 
 var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
@@ -20,14 +30,16 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+// var server = http.createServer(app);
+
+let server = https.createServer(options,app)
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
 server.listen(port,function(){
-  console.log('服务已开启')
+  console.log('服务已开启','https://luyongwei.cn:8080')
 });
 server.on('error', onError);
 server.on('listening', onListening);
